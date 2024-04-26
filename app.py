@@ -5,7 +5,7 @@ import streamlit as st
 import pdfplumber
 import tabula
 import pandas as pd
-
+st.set_page_config(page_title="PDF to EXCEL")
 st.title("UPLOAD HSC RESULT PDF")
 class PdDataFrame:
     def __init__(self):
