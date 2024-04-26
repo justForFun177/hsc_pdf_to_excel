@@ -81,4 +81,4 @@ try :
         a = parsed_df.to_csv().encode('utf-8')
         st.download_button("DOWNLOAD FILE", a, file_name="final.csv", mime="text/csv")
 except Exception:
-    sr.error("PLEASE CHECK FILE FORMAT!!!")
+    st.error("PLEASE CHECK FILE FORMAT!!!")
