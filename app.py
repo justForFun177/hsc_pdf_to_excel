@@ -138,6 +138,6 @@ if pdf:
     parser = HSCScienceParser()
     parsed_df = parser.do_parsing(pdf)
 
-    if parsed_df is not None:
-        a = parsed_df.to_csv().encode('utf-8')
-        st.download_button("DOWNLOAD FILE", a, file_name="final.csv", mime="text/csv")
+    # if parsed_df is not None:
+    a = parsed_df.to_csv().encode('utf-8')
+    st.download_button("DOWNLOAD FILE", a, file_name="final.csv", mime="text/csv")
