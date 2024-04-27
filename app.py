@@ -7,6 +7,13 @@ import tabula
 import pandas as pd
 st.set_page_config(page_title="PDF to EXCEL")
 st.title("UPLOAD HSC RESULT PDF")
+hide_default_format = """
+       <style>
+       #MainMenu {visibility: hidden; }
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
 class PdDataFrame:
     def __init__(self):
         self.objs = {}
