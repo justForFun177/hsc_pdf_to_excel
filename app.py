@@ -83,7 +83,7 @@ try :
     if pdf:
         parser = HSCScienceParser()
         parsed_df = parser.do_parsing(pdf)
-    
+        parsed_df = parsed_df.rename(columns={'Unnamed: 0': '', 'Unnamed: 1': ''})
         time.sleep(5)
         a = parsed_df.to_csv().encode('utf-8')
         st.download_button("DOWNLOAD FILE", a, file_name="final.csv", mime="text/csv")
